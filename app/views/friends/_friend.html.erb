@@ -1,0 +1,25 @@
+<div id="<%= dom_id friend %>">
+<table class="table table-hover">
+  <thead class="table-dark">
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Twitter</th>
+    <th></th>
+    <th></th>
+  </tr>
+</thead>
+  <tbody>
+  <tr>
+    <td><%= friend.first_name %></td>
+    <td><%= friend.last_name %></td>
+    <td><%= friend.email %></td>
+    <td><%= friend.phone %></td>
+    <td><%= friend.twitter %></td>
+    <td><%= button_to "Delete", @friend, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger btn-sm" %></td>
+  </tr>
+  </tbody>
+</table>
+</div>
