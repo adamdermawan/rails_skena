@@ -1,0 +1,25 @@
+%p{:style => "color: green"}= notice
+- content_for :title, "Friends"
+%h1 Friends List
+#friends
+  %table.table.table-striped.table-bordered.table-hover
+    %thead.table-dark
+      %tr
+        %th First Name
+        %th Last Name
+        %th Email
+        %th Phone
+        %th Twitter
+        %th
+        %th
+    %tbody
+      - @friends.each do |friend|
+        %tr
+          %td= friend.first_name
+          %td= friend.last_name
+          %td= friend.email
+          %td= friend.phone
+          %td= friend.twitter
+          %td= link_to "Show", friend
+          %td= button_to "Delete", @friend, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger btn-sm"
+= link_to "New friend", new_friend_path

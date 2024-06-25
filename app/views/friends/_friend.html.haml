@@ -1,0 +1,19 @@
+%div{:id => "#{dom_id friend}"}
+  %table.table.table-hover
+    %thead.table-dark
+      %tr
+        %th First Name
+        %th Last Name
+        %th Email
+        %th Phone
+        %th Twitter
+        %th
+        %th
+    %tbody
+      %tr
+        %td= friend.first_name
+        %td= friend.last_name
+        %td= friend.email
+        %td= friend.phone
+        %td= friend.twitter
+        %td= button_to "Delete", @friend, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger btn-sm"

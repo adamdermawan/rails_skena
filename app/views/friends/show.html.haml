@@ -1,0 +1,6 @@
+%p{:style => "color: green"}= notice
+= render @friend
+%div
+  = link_to "Edit friend", edit_friend_path(@friend)
+  |
+  \#{link_to "Back to friends", friends_path}
