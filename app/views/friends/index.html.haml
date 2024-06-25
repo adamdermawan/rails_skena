@@ -15,11 +15,11 @@
     %tbody
       - @friends.each do |friend|
         %tr
-          %td= friend.first_name
-          %td= friend.last_name
-          %td= friend.email
-          %td= friend.phone
-          %td= friend.twitter
-          %td= link_to "Show", friend
-          %td= button_to "Delete", @friend, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger btn-sm"
+          %td{:id => "1"}= friend.first_name
+          %td{:id => "2"}= friend.last_name
+          %td{:id => "3"}= friend.email
+          %td{:id => "4"}= friend.phone
+          %td{:id => "5"}= friend.twitter
+          %td{:id => "6"}= link_to "Show", friend
+          %td{:id => "7"}= button_to "Delete", @friend, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger btn-sm"
 = link_to "New friend", new_friend_path
