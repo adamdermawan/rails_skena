@@ -10,5 +10,6 @@
         %li.nav-item
           = link_to 'Friends', friends_path, class:"nav-link"
       %form.d-flex{:role => "search"}
-        %input.form-control.me-2{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/
-        %button.btn.btn-outline-success{:type => "submit"} Search
+        -# %input.form-control.me-2{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/
+        %div{:id => "log_out"}= link_to "Log Out",home_about_path ,class: "btn btn-outline-danger btn-sm"
+ 
