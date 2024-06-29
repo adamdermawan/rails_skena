@@ -20,8 +20,8 @@ gem "jbuilder"
 gem 'html2haml'
 gem "haml-rails", "~> 2.0"
 # Use Redis adapter to run Action Cable in production
-gem "redis", ">= 4.0.1"
-gem install bootstrap -v 5.3.3
+# gem "redis", ">= 4.0.1"
+# gem install bootstrap -v 5.3.3
 # Boostrap v/ 5.3.3
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
@@ -59,3 +59,5 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem "cssbundling-rails", "~> 1.4"

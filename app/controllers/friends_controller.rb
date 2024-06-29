@@ -22,7 +22,6 @@ class FriendsController < ApplicationController
   # POST /friends or /friends.json
   def create
     @friend = Friend.new(friend_params)
-
     respond_to do |format|
       if @friend.save
         format.html { redirect_to friend_url(@friend), notice: "Friend was successfully created." }
@@ -50,7 +49,6 @@ class FriendsController < ApplicationController
   # DELETE /friends/1 or /friends/1.json
   def destroy
     @friend.destroy!
-
     respond_to do |format|
       format.html { redirect_to friends_url, notice: "Friend was successfully Deleted." }
       format.json { head :no_content }
